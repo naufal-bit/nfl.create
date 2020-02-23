@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+   </head>
+
+   <body>
+
+      <div id="box" style="width: 300px; height: 300px; background-color: red; transition: .5s;">
+
+      </div>
+      <br>
+      <div>
+         <p>Pilih warna box</p>
+         <select id="color-list">
+            <option value="red">Merah</option>
+            <option value="radial-gradient(circle, rgba(155,255,127,1) 0%, rgba(0,255,243,1) 100%)">Ijo</option>
+            <option value="radial-gradient(circle, rgba(127,255,234,1) 0%, rgba(140,0,255,1) 100%)">Biru</option>
+            <option value="radial-gradient(circle, rgba(127,255,234,1) 0%, rgba(232,240,131,1) 32%, rgba(0,108,255,1) 100%)">Kuning</option>
+            <option value="grey">Abu-abu</option>
+         </select>
+
+         <p>Pilih ukuran box</p>
+         <select id="size-list">
+            <option value="200">200</option>
+            <option value="300">300</option>
+            <option value="400">400</option>
+            <option value="500">500</option>
+            <option value="600">600</option>
+         </select>
+
+         <p>Pilih tampilan box</p>
+         <select id="tamp-list">
+            <option value="1">show</option>
+            <option value="0">hide</option>
+         </select>
+      </div>
+
+      
+      <!-- <script>
+         var box = document.getElementById("box");
+         var colorList = document.getElementById("color-list");
+         colorList.addEventListener('change', function(event){
+            box.style.backgroundColor = event.target.value;
+         });
+      </script> -->
+      <script src="js/jquery-3.4.1.min.js"></script>
+      <script>
+         $(document).ready(function(){
+            var box = $("#box");
+            var colorList = $('#color-list');
+            colorList.on('change', function(eventSelect){
+               box.css('background', eventSelect.target.value);
+            });
+
+            var sizeList = $('#size-list');
+            sizeList.on('change', function(eventSelect){
+               box.css('width', eventSelect.target.value);
+               box.css('height', eventSelect.target.value);
+            });
+
+            var tamp = $('#tamp-list');
+            tamp.on('change', function(eventSelect){
+               box.css('opacity', eventSelect.target.value);
+            });
+         });
+      </script>   
+   </body>
+</html>
