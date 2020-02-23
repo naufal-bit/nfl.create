@@ -1,72 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html><head>
+    <!-- Fill with title and name -->
+    <title>
+        Portfolio
+    </title>
+    <meta name="author" content="Your Name" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <!-- Fill with styling and icon -->
+    <link rel="shortcut icon" type="icon" href="https://previews.123rf.com/images/uasumy/uasumy1602/uasumy160200012/52193336-monogram-logo-n-letter-business-card-emblem-minimal-linear-style-typography-design-element.jpg">
+    <link rel="stylesheet" href="https://themes.gohugo.io/theme/pulp/style.min.a50e85be2191b7446e684667eb002377b10f833f329c30d9b701ea188a664750.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- Fill with meta description -->
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="Your favorite resume text" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://themes.gohugo.io//theme/pulp/" />
+    <meta property="og:updated_time" content="2020-02-23T00:00:00+00:00" />
+    <meta itemprop="name" content="Your favorite resume text">
+    <meta itemprop="description" content="Your favorite resume text">
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="@yourusername"/>
+    <meta name="twitter:description" content="Your favorite resume text"/>
 
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
-   </head>
+    <!--[if lte IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+    <![endif]-->
 
-   <body>
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
 
-      <div id="box" style="width: 300px; height: 300px; background-color: red; transition: .5s;">
+    <style>
+      body
+      {
+        background: rgb(180,127,255);
+        background: linear-gradient(90deg, rgba(180,127,255,1) 0%, rgba(131,240,226,1) 100%) ;
+        font-family: 'Montserrat';
+      }
 
+      img
+      {
+        border-radius: 50%;
+        box-shadow: 0 5px 7px rgba(0,0,0,.5);
+      }
+
+      h1, p
+      {
+        color: white;
+        text-shadow: 0 3px 7px rgba(0,0,0,.5);
+      }
+    </style>
+  </head>
+  <body>
+      <div id="profileContainer">
+        <div id="profile">
+          <header>
+              <div class="avatar">
+                  <!--profile-->
+                  <img class="avatarMask" src="https://previews.123rf.com/images/uasumy/uasumy1602/uasumy160200012/52193336-monogram-logo-n-letter-business-card-emblem-minimal-linear-style-typography-design-element.jpg" alt="avatar">
+                  <!--border-->
+                  <img src="https://themes.gohugo.io//theme/pulp/img/avatar-border.svg" alt="avatar-border">
+              </div>
+            
+              <h1 class="author">
+                  Naufal Imaanullah
+              </h1>
+          </header>
+          
+          <p>
+              N.Create  <br>
+              Cirebon, 28 Agustus 1999  
+          </p>
+          
+          <nav>
+            <ul>
+              <li><a href="https://medium.com" aria-label="blog"><i class='fa fa-book-open fa-lg'></i><br></a></li>
+              <li><a href="https://twitter.com/xinco99" aria-label="twitter"><i class='fab fa-twitter fa-lg'></i><br></a></li>
+              <li><a href="https://github.com/naufal-bit" aria-label="github"><i class='fab fa-github fa-lg'></i><br></a></li>
+              <li><a href="nimaanullah@gmail.com" aria-label="email"><i class='fa fa-envelope fa-lg'></i><br></a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
-      <br>
-      <div>
-         <p>Pilih warna box</p>
-         <select id="color-list">
-            <option value="red">Merah</option>
-            <option value="radial-gradient(circle, rgba(155,255,127,1) 0%, rgba(0,255,243,1) 100%)">Ijo</option>
-            <option value="radial-gradient(circle, rgba(127,255,234,1) 0%, rgba(140,0,255,1) 100%)">Biru</option>
-            <option value="radial-gradient(circle, rgba(127,255,234,1) 0%, rgba(232,240,131,1) 32%, rgba(0,108,255,1) 100%)">Kuning</option>
-            <option value="grey">Abu-abu</option>
-         </select>
-
-         <p>Pilih ukuran box</p>
-         <select id="size-list">
-            <option value="200">200</option>
-            <option value="300">300</option>
-            <option value="400">400</option>
-            <option value="500">500</option>
-            <option value="600">600</option>
-         </select>
-
-         <p>Pilih tampilan box</p>
-         <select id="tamp-list">
-            <option value="1">show</option>
-            <option value="0">hide</option>
-         </select>
-      </div>
-
       
-      <!-- <script>
-         var box = document.getElementById("box");
-         var colorList = document.getElementById("color-list");
-         colorList.addEventListener('change', function(event){
-            box.style.backgroundColor = event.target.value;
-         });
-      </script> -->
-      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-      <script>
-         $(document).ready(function(){
-            var box = $("#box");
-            var colorList = $('#color-list');
-            colorList.on('change', function(eventSelect){
-               box.css('background', eventSelect.target.value);
-            });
-
-            var sizeList = $('#size-list');
-            sizeList.on('change', function(eventSelect){
-               box.css('width', eventSelect.target.value);
-               box.css('height', eventSelect.target.value);
-            });
-
-            var tamp = $('#tamp-list');
-            tamp.on('change', function(eventSelect){
-               box.css('opacity', eventSelect.target.value);
-            });
-         });
-      </script>   
-   </body>
+      <footer>
+        <p>
+          &copy; 2020 NFL-Create.
+          Copied from <a href="https://github.com/koirand/pulp/">pulp</a> theme.
+        </p>
+      </footer>
+  </body>
 </html>
